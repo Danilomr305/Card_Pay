@@ -234,8 +234,21 @@ class _MoedasPageState extends State<MoedasPage> {
             height: 20,
           ),
 
-          const CustomScrollView(
-            
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              ListView.separated(
+                itemBuilder: (BuildContext context, int moeda) {
+                  return ListTile(
+                    leading: Image.asset(tabela[moeda].icone),
+                    title: Text(tabela[moeda].nome)
+                  );
+                },
+                padding: const EdgeInsets.all(16),
+                separatorBuilder: (_, __) => const Divider(),
+                itemCount: tabela.length,
+              ),
+            ],
           ),
         ]
       ),
