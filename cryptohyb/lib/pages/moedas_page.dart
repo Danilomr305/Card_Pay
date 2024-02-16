@@ -231,27 +231,22 @@ class _MoedasPageState extends State<MoedasPage> {
           const GridWidets(),
 
           const SizedBox(
-            height: 20,
+            height: 10,
           ),
 
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              ListView.separated(
+          /*ListView.separated(
                 itemBuilder: (BuildContext context, int moeda) {
                   return ListTile(
                     leading: Image.asset(tabela[moeda].icone),
                     title: Text(tabela[moeda].nome)
                   );
                 },
-                padding: const EdgeInsets.all(16),
                 separatorBuilder: (_, __) => const Divider(),
                 itemCount: tabela.length,
-              ),
-            ],
-          ),
+              ),*/
         ]
       ),
+      
     );
   }
 }
