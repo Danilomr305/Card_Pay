@@ -1,5 +1,5 @@
 
-// ignore_for_file: unused_import, unused_local_variable
+// ignore_for_file: unused_import, unused_local_variable, avoid_unnecessary_containers
 
 
 import 'package:flutter/cupertino.dart';
@@ -234,16 +234,24 @@ class _MoedasPageState extends State<MoedasPage> {
             height: 10,
           ),
 
-          /*ListView.separated(
-                itemBuilder: (BuildContext context, int moeda) {
-                  return ListTile(
-                    leading: Image.asset(tabela[moeda].icone),
-                    title: Text(tabela[moeda].nome)
-                  );
-                },
-                separatorBuilder: (_, __) => const Divider(),
-                itemCount: tabela.length,
-              ),*/
+          Expanded(
+            child: SizedBox(
+              width: double.infinity,
+              child: ListView.separated(
+                    itemBuilder: (BuildContext context, int moeda) {
+                      return  ListTile(
+                          leading: Image.asset(tabela[moeda].icone),
+                          title: Text(tabela[moeda].nome),
+                          trailing: Text(tabela[moeda].preco.toString()),
+                        );
+                    },
+                    padding: const EdgeInsets.all(10),
+                    separatorBuilder: (_, __) => const Divider(),
+                    itemCount: tabela.length,
+                    shrinkWrap: true,
+                  ),
+            ),
+          ),
         ]
       ),
       
