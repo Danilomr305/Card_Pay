@@ -234,7 +234,7 @@ class _MoedasPageState extends State<MoedasPage> {
             height: 10,
           ),
 
-          Expanded(
+          /*Expanded(
             child: SizedBox(
               width: double.infinity,
               child: ListView.separated(
@@ -251,7 +251,7 @@ class _MoedasPageState extends State<MoedasPage> {
                     shrinkWrap: true,
                   ),
             ),
-          ),
+          ),*/
         ]
       ),
       
